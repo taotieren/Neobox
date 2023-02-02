@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.10.1)
 
-find_package(minizip CONFIG REQUIRED)
+find_package(MINIZIP REQUIRED)
+include_directories( SYSTEM ${MINIZIP_INCLUDE_DIRS} )
 file(GLOB sources src/*.cpp)
 
 foreach(item ${sources})

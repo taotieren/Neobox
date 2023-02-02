@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.10.1)
 
 if (UNIX)
-  find_package(CURL CONFIG REQUIRED)
+  find_package(CURL REQUIRED)
+  include_directories( SYSTEM ${CURL_INCLUDE_DIRS} )
 endif()
 
 find_package(Qt6 REQUIRED COMPONENTS Core Widgets Gui)
